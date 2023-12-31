@@ -1,0 +1,123 @@
+table,
+td,
+th {
+   border: 1px solid black;
+}
+
+table {
+   border-collapse: collapse;
+   width: 90%;
+   margin: auto;
+}
+
+table .product-img {
+   max-width: 50px;
+}
+
+th,
+td {
+   text-align: center;
+   padding: 0.5rem;
+}
+
+.pagination {
+   display: flex;
+   margin: 1rem 0;
+   justify-content: space-between;
+
+}
+
+.pagination .box {
+
+   border: 1px solid black;
+   padding: 0.5rem;
+   cursor: pointer;
+   margin: 0 0.5rem;
+}
+
+.pagination .box:hover {
+   background-color: black;
+   color: white;
+}
+
+.pagination input {
+   border: none;
+   outline: none;
+   width: 100%;
+   height: 100%;
+}
+
+.pagination .box.input {
+   padding: 0;
+   width: 70px;
+}
+
+textarea {
+   width: 100%;
+   resize: vertical;
+}
+
+select {
+   width: 100%;
+   padding: 0.5rem;
+}
+
+.form-group {
+   margin: 1rem 0;
+}
+
+form .grid {
+   padding: 0;
+}
+
+.uploaded-img {
+   width: 200px;
+}
+
+aside.desktop-active {
+   display: block;
+   width: 25%;
+   background-color: black;
+   color: white;
+   position: fixed;
+   z-index: 100;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   padding: 1rem;
+   transform: translateX(0%);
+   transition: transform 0.3s ease-in-out;
+}
+main , header, footer  {
+   margin-left: 25%;
+}
+.largest-text {
+   font-size: var(--large-title);
+}
+button#side-bar-collapse {
+   display: none;
+}
+@media (min-width : 801px) {
+   section#cover.active {
+      display: none;
+   }
+   aside.active button#side-bar-collapse {
+      display: none;
+   }
+}
+@media (max-width : 800px) {
+   main , header , footer  {
+      margin-left: 0%;
+   }
+   aside.desktop-active {
+    
+      transform: translateX(-100%);
+   }
+   aside.desktop-active.active {
+      transform: translateX(0);
+      width: 90%;
+   }
+   aside {
+      transform: translateX(-100%);
+   }
+}
